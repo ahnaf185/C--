@@ -1,11 +1,11 @@
 #include<iostream>
 
 void searcharray(double array[], int size, double search){
-    
+    bool found = false;
     for(int i = 0; i < size; i++){
         if(array[i] ==  search){
             std::cout << "Your number is at index " << i + 1 << '\n';
-            bool found = true;
+            found = true;
         }
     }
     if(!found){
