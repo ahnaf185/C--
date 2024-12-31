@@ -5,12 +5,12 @@ void searcharray(double array[], int size, double search){
     for(int i = 0; i < size; i++){
         if(array[i] ==  search){
             std::cout << "Your number is at index " << i + 1 << '\n';
-        }
-        else{
-            std::cout << search << " was not in the array\n";
-            break;
+            bool found = true;
         }
     }
+    if(!found){
+        std::cout << search << " was not in the array\n";
+    }   
     return;
 }
 
