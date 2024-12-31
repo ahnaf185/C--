@@ -6,6 +6,10 @@ void searcharray(double array[], int size, double search){
         if(array[i] ==  search){
             std::cout << "Your number is at index " << i + 1 << '\n';
         }
+        else{
+            std::cout << search << " was not in the array\n";
+            break;
+        }
     }
     return;
 }
