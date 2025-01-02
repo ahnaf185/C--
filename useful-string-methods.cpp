@@ -23,6 +23,7 @@ else{
 
 //name.erase(5, 20);
 
+name.size() //Gives the size of teh string
 std::cout << name.length() << '\n';
 
     return 0;
