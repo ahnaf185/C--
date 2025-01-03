@@ -1,8 +1,62 @@
-            - name: Setup C/C++ Compiler
+            - name: Setup Cpp (C++ / C)
   # You may pin to the exact commit or the version.
-  # uses: rlalik/setup-cpp-compiler@f39db50a7fd04bfd65ce41e8fec0ac185ae59dfb
-  uses: rlalik/setup-cpp-compiler@v1.2
+  # uses: aminya/setup-cpp@290824452986e378826155f3379d31bce8753d76
+  uses: aminya/setup-cpp@v0.37.0
   with:
-    # Compiler to install
-    compiler: # optional, default is gcc-latest
+    # The compiler to use and its optional version separated by - e.g. llvm-13.0.0
+    compiler: # optional
+    # The CPU architecture
+    architecture: # optional
+    # The llvm version to install
+    llvm: # optional
+    # The gcc version to install
+    gcc: # optional
+    # The msvc version to install
+    msvc: # optional
+    # If should run vcvarsall?
+    vcvarsall: # optional
+    # The cmake version to install.
+    cmake: # optional
+    # The ninja version to install.
+    ninja: # optional
+    # The conan version to install.
+    conan: # optional
+    # The make version to install.
+    make: # optional
+    # The task version to install.
+    task: # optional
+    # The vcpkg version to install.
+    vcpkg: # optional
+    # The meson version to install.
+    meson: # optional
+    # The gcovr version to install.
+    gcovr: # optional
+    # The python version to install.
+    python: # optional
+    # The ccache version to install.
+    ccache: # optional
+    # The sccache version to install.
+    sccache: # optional
+    # The doxygen version to install.
+    doxygen: # optional
+    # The graphviz version to install.
+    graphviz: # optional
+    # The cppcheck version to install.
+    cppcheck: # optional
+    # The clang-tidy version to install.
+    clangtidy: # optional
+    # The clang-format version to install.
+    clangformat: # optional
+    # The opencppcoverage version to install.
+    opencppcoverage: # optional
+    # The kcov version to install.
+    kcov: # optional
+    # The 7z version to install.
+    sevenzip: # optional
+    # The nala version to install ("" or "legacy").
+    nala: # optional
+    # The powershell version to install.
+    powershell: # optional
+    # The timeout for installation of one tool (in minutes).
+    timeout: # optional, default is 20
           
