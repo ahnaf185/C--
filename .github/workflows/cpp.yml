@@ -1,0 +1,36 @@
+name: Build and Run C++ Code
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the code
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Step 2: Setup C++ environment with aminya/setup-cpp
+    - name: Setup Cpp (C++ / C)
+      uses: aminya/setup-cpp@v0.37.0
+      with:
+        # Optional fields to specify which tools to install
+        compiler: gcc  # You can specify 'gcc', 'clang', or 'msvc'
+        cmake: '3.21.0'  # Specify the version of cmake
+        make: '4.3'  # Specify the version of make
+        python: '3.9'  # Specify the version of python
+        cppcheck: '2.5'  # Specify cppcheck version for static analysis
+        timeout: 30  # Timeout for tool installation (default is 20 minutes)
+
+    # Step 3: Compile C++ code
+    - name: Compile C++ code
+      run: |
+        g++ -o my_program main.cpp  # Replace 'main.cpp' with your actual file
+        ./my_program  # Run the compiled program
