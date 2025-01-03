@@ -1,18 +1,8 @@
-name: Build and Run C++ Code
-
-on:
-  push:
-    branches:
-      - main  # Trigger on push to the main branch
-  pull_request:
-    branches:
-      - main  # Trigger on pull request to the main branch
-
-jobs:
-  build:
-    runs-on: ubuntu-latest  # You can change it to 'windows-latest' or 'macos-latest' if needed
-
-    steps:
-      # Step 1: Checkout code
-      - name: Checkout code
-        uses: actions/checkout
+            - name: Setup C/C++ Compiler
+  # You may pin to the exact commit or the version.
+  # uses: rlalik/setup-cpp-compiler@f39db50a7fd04bfd65ce41e8fec0ac185ae59dfb
+  uses: rlalik/setup-cpp-compiler@v1.2
+  with:
+    # Compiler to install
+    compiler: # optional, default is gcc-latest
+          
