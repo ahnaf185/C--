@@ -18,5 +18,6 @@ Here are a few that one should do:
 This should run the code in terminal tab
 
 
+If you believe this is AI made then you are a stupid
 
  
